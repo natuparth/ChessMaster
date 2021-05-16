@@ -405,7 +405,7 @@ export function findPossibleMoves(tempcellDetails,r,c, chance){
         const checkFlag = checkForKingChecked(temporary, coinSelected.coinColor)
         if(checkFlag === true)
           {
-            alert('how dare you macha! your king is under threat');
+            alert('You cannot move! Your king is under check');
           }
         else{
              tempcellDetails[Number(cellSelected[0])][Number(cellSelected[1])] = samplecell

@@ -47,12 +47,13 @@ function Grid({ coinPositions, player1, player2 }){
     useEffect(()=> {
         if(checkFlag==true){
             if(checkmateFlag==true){
-                alert('haha ! you have no more moves, i won')
+                alert("Game is over now!Let's start another match")
                 setCellDetailsHandler(coinPositions)
                 setCheckmateFlag(false)
+                setChanceHandler('white')
             }
             else
-            alert('haha macha! your king is under threat');
+            alert('King has got a check on it');
             setCheckFlag(false)
           }
       let timer = setInterval(()=>{
@@ -65,11 +66,7 @@ function Grid({ coinPositions, player1, player2 }){
       },1000)
       return () => clearInterval(timer)
     })
-    // useEffect(() => {
-    // if(classArray[0]=='checked'){
-    //     alert('haha macha! your king is under threat');
-    //   }
-    // },chance);
+    
 let initialColor = "black"
     for (let i = 0; i < 8; i++) {
         let row = CreateRow(initialColor, i, cellDetails)
@@ -160,8 +157,7 @@ let initialColor = "black"
          setChanceHandler(chance=='white'?'black':'white');
             }
     }
-      //alert(tempcellDetails[r][c].coinColor+tempcellDetails[Number(cellSelected[0])][Number(cellSelected[1])].coinColor)
-}
+    }
 for(let i=0;i<8;i++){
 for(let j=0;j<8;j++){
   if (tempcellDetails[i][j].isActive) {
