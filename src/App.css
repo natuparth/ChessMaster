@@ -1,0 +1,169 @@
+:root {
+  --white: #afafaf;
+  --red: #e31b23;
+  --bodyColor: #292a2b;
+  --borderFormEls: hsl(0, 0%, 10%);
+  --bgFormEls: hsl(0, 0%, 14%);
+  --bgFormElsFocus: hsl(0, 7%, 20%);
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.boardContainer{
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: repeat(8,1fr);
+}
+
+.header{
+  width: 600px;
+  height: 500px;
+  border: 2px solid red;
+  text-align: center;
+  background: bisque;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+
+
+.my-form input{
+  margin: 5em 2em 5em;
+  line-height: 1.5;
+  padding: 15px 10px;
+  border: 1px solid var(--borderFormEls);
+  color: var(--white);
+  background: var(--bgFormEls);
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+
+.my-form ::placeholder {
+  color: inherit;
+  /*Fix opacity issue on Firefox*/
+  opacity: 1;
+}
+
+
+.my-form input:focus {
+  background: var(--bgFormElsFocus);
+}
+
+
+.my-form input:focus {
+  transform: scale(1.02);
+}
+
+
+
+
+.my-form *:disabled {
+  cursor: default;
+  filter: blur(2px);
+}
+
+@media only screen and (max-width: 765px), only screen and (max-device-width: 765px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header{
+    width: 300px;
+    height: 400px;
+    border: 2px solid red;
+    text-align: center;
+    background: bisque;
+  }
+  .my-form input{
+    margin: 2em 1em 2em;
+    line-height: 1.5;
+    padding: 15px 10px;
+    border: 1px solid var(--borderFormEls);
+    color: var(--white);
+    background: var(--bgFormEls);
+    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+      transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+  }
+  }
