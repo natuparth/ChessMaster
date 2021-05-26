@@ -1,4 +1,4 @@
-[{"id":1,"first_name":"Freeland","last_name":"Kloisner","email":"fkloisner0@sina.com.cn"},
+{ "users": [{"id":1,"first_name":"Freeland","last_name":"Kloisner","email":"fkloisner0@sina.com.cn"},
 {"id":2,"first_name":"Hedi","last_name":"Jeannenet","email":"hjeannenet1@woothemes.com"},
 {"id":3,"first_name":"Hans","last_name":"Meadowcraft","email":"hmeadowcraft2@harvard.edu"},
 {"id":4,"first_name":"Jarib","last_name":"Kinsley","email":"jkinsley3@patch.com"},
@@ -998,3 +998,4 @@
 {"id":998,"first_name":"Bruce","last_name":"Turnock","email":"bturnockrp@admin.ch"},
 {"id":999,"first_name":"Florinda","last_name":"Pyne","email":"fpynerq@disqus.com"},
 {"id":1000,"first_name":"Martie","last_name":"Jiranek","email":"mjiranekrr@hostgator.com"}]
+}
